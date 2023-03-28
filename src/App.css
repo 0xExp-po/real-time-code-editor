@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+.preloader
+{
+  background-position: center;
+  background-size: cover;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   color:#fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.HomePageWrapper{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   color:#fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.FormWrapper{
+  
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.InputGroup
+{
+   display: flex;
+   flex-direction: column;
+}
+
+.MainLabel
+{
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.HomePageLogo
+{
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.InputBox
+{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 14px;
+    background: #eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn
+{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer
+{
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer a 
+{
+  color: #4aee88;
+}
+
+.footer-name
+{
+  color: #4aee88;
+}
+
+
+.joinBtn
+{
+  background: #4aed88;
+  width: 100px;
+  margin-left: auto;
+}
+
+.leaveBtn {
+    margin-top: 20px;
+    background: #4aed88;
+}
+
+.joinBtn:hover,
+.leaveBtn:hover {
+    background: #2b824c;
+}
+
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn {
+  color: #4aed88;
+  text-decoration: none;
+  border-bottom: 1px solid #4aed88;
+  transition: all 0.3s ease-in-out;
+}
+
+.createNewBtn:hover,
+footer a:hover {
+  color: #368654;
+  border-color: #368654;
+}
+
+.mainWrap
+{
+  display: grid;
+  grid-template-columns:230px 1fr;
+}
+
+.aside
+{
+   background:#1c1e29;
+   padding:16px;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+}
+
+.aside-inner
+{
+   flex: 1;
+}
+
+.clientsList
+{
+   display:flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.client
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.username
+{
+   margin-top: 10px;
+}
+
+
+.logo{
+  border-bottom: 1px solid #424242;
+  padding-bottom:10px;
+}
+
+.logoImage
+{
+   height: 60px;
+}
+
+.CodeMirror {
+  min-height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+
+
+
+.main-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
 }
 
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
+}
 }
