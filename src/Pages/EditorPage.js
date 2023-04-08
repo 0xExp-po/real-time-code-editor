@@ -22,8 +22,10 @@ const EditorPage = () => {
   ]);
  
   useEffect(() => {
+    let ding = new Audio('/ding.mp3');
     setTimeout(() => {
       SetLoading(false);
+      ding.play();
     }, 3000);
   }, []);
   
@@ -55,7 +57,9 @@ const EditorPage = () => {
               ACTIONS.JOINED,
               ({ clients, username, socketId }) => {
                   if (username !== location.state?.username) {
+                      let Join = new Audio('/Join.mp3');
                       toast.success(`${username} joined the room.`);
+                      Join.play();
                       console.log(`${username} joined`);
                   }
                   SetClients(clients);
@@ -93,7 +97,9 @@ const EditorPage = () => {
           socketRef.current.on(
               ACTIONS.DISCONNECTED,
               ({ socketId, username }) => {
+                  let Left = new Audio('/Left.mp3');
                   toast.success(`${username} left the room.`);
+                  Left.play();
                   SetClients((prev) => {
                       return prev.filter(
                           (client) => client.socketId !== socketId
